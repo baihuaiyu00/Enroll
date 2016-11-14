@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.csxupt.cal.mapper.StuInfoInsertMapper">
+    <!-- 添加个人办公机账号 -->
+    <insert id="stuInsert" parameterType="Student">
+        insert into interview_info(stu_name,stu_num,sex,major,tel,email,choice,self_introd,f_remarks,s_remarks,t_remarks) values(#{stu_name},#{stu_num},#{sex},#{major},#{tel},#{email},#{choice},#{self_introd},1,1,1)
+    </insert>
+</mapper>
+

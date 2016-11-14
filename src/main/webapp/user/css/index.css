@@ -1,0 +1,11 @@
+body {
+    position: relative;
+    font-family: STXIHEI;
+    font-size: 18px;
+    color: #ffffff;
+}
+.music-list {
+    font-family: "Microsoft YaHei UI";
+    color: #000;
+    font-size: 15px;
+}
