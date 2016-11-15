@@ -126,12 +126,12 @@ public class ValidateController {
         String userCookie = (String) session.getAttribute("userCookie");
         System.out.println("userCookie="+userCookie);
 
-        String uriAPI = "http://222.24.62.120/default2.aspx";// Post方式没有参数在这里
+        String uriAPI = "http://***.**.**.***/**.aspx";// Post方式没有参数在这里
         HttpPost httpPost = new HttpPost(uriAPI);// 创建HttpPost对象
         CloseableHttpClient httpClient = HttpClients.createDefault();
 
         //开始模拟HTTP协议
-        httpPost.setHeader("Host","222.24.62.120");
+        httpPost.setHeader("Host","*.*.*.*");
         httpPost.setHeader("User-Agent", USER_AGENT);
         httpPost.setHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
         httpPost.setHeader("Content-Type", "application/x-www-form-urlencoded");
