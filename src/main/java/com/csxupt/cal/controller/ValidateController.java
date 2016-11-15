@@ -42,9 +42,9 @@ public class ValidateController {
 //    org.apache.http.client.methods.HttpUriRequest
 
     // 学校教务处登陆页面
-    private final String LOGIN_URL = "http://222.24.62.120/";
+    private final String LOGIN_URL = "http://***.**.**.***/";
     // 验证码页面
-    private final String CAPTCHA_URL = "http://222.24.62.120/CheckCode.aspx";
+    private final String CAPTCHA_URL = "http://***.**.**.***/**.aspx";
     // 保存会话cookie
     public static String cookieValue = null;
     // 模拟登录设置服务器代理
@@ -69,7 +69,7 @@ public class ValidateController {
             httpGet.setHeader("Cookie", cookies);
             //update to add userCookie to session for validate
             request.getSession().setAttribute("userCookie",cookies);
-            httpGet.setHeader("Referer", "http://jyc.xupt.edu.cn/index/jxglxtrk.htm");
+            httpGet.setHeader("Referer", "http://*****.cn/index/**.htm");
             httpGet.setHeader("Origin", "http://www.baidu.com/");
             CloseableHttpResponse response = httpClient.execute(httpGet);
 
@@ -135,15 +135,15 @@ public class ValidateController {
         httpPost.setHeader("User-Agent", USER_AGENT);
         httpPost.setHeader("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
         httpPost.setHeader("Content-Type", "application/x-www-form-urlencoded");
-        httpPost.setHeader("Referer", "http://222.24.62.120/default2.aspx");
-        httpPost.setHeader("Origin", "http://222.24.62.120");
+        httpPost.setHeader("Referer", "http://***.**.**.***/***.aspx");
+        httpPost.setHeader("Origin", "http://***.**.**.***/***");
         httpPost.setHeader("Cookie", userCookie);
         List<NameValuePair> params = new ArrayList<NameValuePair>();
-        params.add(new BasicNameValuePair("__VIEWSTATE", "dDwyODE2NTM0OTg7Oz5LUCaVfG1Oi+QaOSKH9UZrpjfn1w=="));
-        params.add(new BasicNameValuePair("txtUserName", userAccount));     //System.out.println("userAccount="+userAccount);
-        params.add(new BasicNameValuePair("TextBox2", request.getParameter("password")));      // System.out.println("passwd="+request.getParameter("password"));
-        params.add(new BasicNameValuePair("txtSecretCode", request.getParameter("validate")));    //  System.out.println("validate="+request.getParameter("validate"));
-        params.add(new BasicNameValuePair("RadioButtonList1", "学生"));
+        params.add(new BasicNameValuePair("__V***TE", "****************UCaVfG1Oi+QaOSKH9UZrpjfn1w=="));
+        params.add(new BasicNameValuePair("txt***Name", userAccount));    
+        params.add(new BasicNameValuePair("TextBox2", request.getParameter("password")));     
+        params.add(new BasicNameValuePair("txtSecretCode", request.getParameter("validate")));   
+        params.add(new BasicNameValuePair("RadioButtonList1", "**"));
         params.add(new BasicNameValuePair("Button1", ""));
         params.add(new BasicNameValuePair("lbLanguage", ""));
         params.add(new BasicNameValuePair("hidPdrs", ""));
